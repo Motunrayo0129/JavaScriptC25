@@ -2,7 +2,7 @@ function menstrualCycleCalculator(cycleLength, lastPeriodDate) {
     if (cycleLength < 21 || cycleLength > 35) {
         return "Please seek medical attention.";
     }
-
+    
     let lastPeriod = new Date(lastPeriodDate);
     let nextPeriodDate = new Date(lastPeriod);
     nextPeriodDate.setDate(lastPeriod.getDate() + cycleLength);
@@ -28,6 +28,6 @@ function menstrualCycleCalculator(cycleLength, lastPeriodDate) {
 }
 
 	const prompt = require("prompt-sync")();
-let cycleLength = Number(prompt("What is your cycle lenght: "));
-let lastPeriodDate = prompt("When was your last period: ");
+let cycleLength = Number(prompt("What is your cycle length: "));
+let lastPeriodDate = prompt("When was your last period (DD-MM-YYYY): ");
 console.log(menstrualCycleCalculator(cycleLength, lastPeriodDate));
