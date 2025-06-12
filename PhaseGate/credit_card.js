@@ -31,8 +31,7 @@ function applyLuhnAlgorithm(cardNumber) {
         if (doubleDigit) {
             digit *= 2;
             if (digit > 9) {
-                digit -= 9;
-            }
+                digit -= 9;            }
         }
 
         sum += digit;
